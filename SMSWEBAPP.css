@@ -1,0 +1,411 @@
+body {
+margin: 0;
+ background: #f7f8fc;
+  font-family: Arial, sans-serif;
+}
+
+/* NAVBAR */
+.navbar {
+  background: #fff;
+  box-shadow: 0 2px 6px #ececec;
+  height: 60px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.navbar-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 0 16px;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #3496fe;
+  z-index: 2;
+}
+
+.nav-links {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 24px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #222;
+  font-weight: 600;
+  font-size: 16px;
+  transition: color 0.2s;
+}
+
+.nav-links a:hover {
+  color: #3496fe;
+}
+
+/* PAGE AREA */
+.page {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 40px 0;
+  min-height: calc(100vh - 60px);
+  width: 100%;
+  background-color: #f7f8fc;
+}
+
+#page-home {
+  display: flex;
+}
+
+/* MAIN CONTENT GRID */
+.main-content {
+  width: 80%;
+  margin: 32px auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 120px 120px;
+  gap: 24px;
+  align-items: start;
+}
+
+.box {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px #ececec;
+  padding: 18px;
+  font-size: 18px;
+  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.center {
+  grid-row: 1 / span 2;
+  grid-column: 2 / span 1;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* FORMS */
+input, textarea {
+  width: 100%;
+  margin: 8px 0;
+  padding: 8px;
+  border: 1px solid #eee;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+button {
+  background: #3496fe;
+  color: #fff;
+  border: none;
+  padding: 10px 22px;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 8px;
+  font-weight: 600;
+}
+
+button:hover {
+  background: #266bc1;
+}
+
+
+/* Center container for #page-library */
+#page-library {
+  /*display: flex;*/
+  flex-direction: column;
+  align-items: center;                   
+  padding-top: 40px;                    
+  min-height: calc(100vh - 60px);       
+  background-color: #f7f8fc;            
+}
+
+/*  Center the heading text and space it down a bit */
+#page-library h1 {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 24px;
+  color: #222;
+}
+
+/*  Wrap label + input + button in a “card” box */
+#page-library .form-card {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  padding: 24px;
+  width: 100%;
+  max-width: 400px;
+  box-sizing: border-box;
+}
+
+/* Style the <label> inside that card */
+#page-library .form-card label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+/*  Style the <input> inside the card */
+#page-library .form-card input {
+  width: 100%;            /* fill 100% of the .form-card’s width */
+  padding: 10px 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-bottom: 16px;
+  box-sizing: border-box;
+}
+
+/* Style the <button> inside the card */
+#page-library .form-card button {
+  width: 100%;            /* 100% of card width */
+  padding: 12px 0;
+  font-size: 16px;
+  font-weight: 600;
+  background-color: #3496fe;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+/* Hover effect for that button */
+#page-library .form-card button:hover {
+  background-color: #26c142;
+}
+
+
+/* ----------  Add Message page  ---------- */
+
+/* 1. Page wrapper */
+#page-message {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 40px;
+  min-height: calc(100vh - 60px);
+  background-color: #f7f8fc;
+}
+
+/* 2. Heading */
+#page-message h1 {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 24px;
+  color: #222;
+}
+
+/* 3. Card around the form */
+#page-message .form-card {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 24px;
+  width: 100%;
+  max-width: 400px;
+  box-sizing: border-box;
+}
+
+/* 4. Labels */
+#page-message .form-card label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+/* 5. Input + Textarea fields */
+#page-message .form-card input,
+#page-message .form-card textarea {
+  width: 100%;
+  padding: 10px 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-bottom: 16px;
+  box-sizing: border-box;
+}
+
+/* Give the textarea extra height and allow resize */
+#page-message .form-card textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+/* 6. Submit button */
+#page-message .form-card button {
+  width: 100%;
+  padding: 12px 0;
+  font-size: 16px;
+  font-weight: 600;
+  background-color: #3496fe;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+/* Hover effect */
+#page-message .form-card button:hover {
+  background-color: #26c142;
+}
+
+/* ----------  Add Group page  ---------- */
+
+/* 1. Page wrapper */
+#page-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 40px;
+  min-height: calc(100vh - 60px);
+  background-color: #f7f8fc;
+}
+
+/* 2. Heading */
+#page-group h1 {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 24px;
+  color: #222;
+}
+
+/* 3. Card around the form */
+#page-group .form-card {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 24px;
+  width: 100%;
+  max-width: 400px;
+  box-sizing: border-box;
+}
+
+/* 4. Labels */
+#page-group .form-card label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+/* 5. Input field */
+#page-group .form-card input {
+  width: 100%;
+  padding: 10px 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-bottom: 16px;
+  box-sizing: border-box;
+}
+
+/* 6. Submit button */
+#page-group .form-card button {
+  width: 100%;
+  padding: 12px 0;
+  font-size: 16px;
+  font-weight: 600;
+  background-color: #3496fe;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+/* Hover effect */
+#page-group .form-card button:hover {
+  background-color: #26c142;
+}
+
+
+/* ----------  Add Contact page  ---------- */
+
+/* 1. Page wrapper */
+#page-contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 40px;
+  min-height: calc(100vh - 60px);
+  background-color: #f7f8fc;
+}
+
+/* 2. Heading */
+#page-contact h1 {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 24px;
+  color: #222;
+}
+
+/* 3. Card around the form */
+#page-contact .form-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 24px;
+  width: 100%;
+  max-width: 400px;
+  box-sizing: border-box;
+}
+
+/* 4. Labels */
+#page-contact .form-card label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+/* 5. Input fields */
+#page-contact .form-card input {
+  width: 100%;
+  padding: 10px 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-bottom: 16px;
+  box-sizing: border-box;
+}
+
+/* 6. Submit button */
+#page-contact .form-card button {
+  width: 100%;
+  padding: 12px 0;
+  font-size: 16px;
+  font-weight: 600;
+  background-color: #3496fe;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+/* Hover effect */
+#page-contact .form-card button:hover {
+  background-color: #26c142;
+}
+
+
