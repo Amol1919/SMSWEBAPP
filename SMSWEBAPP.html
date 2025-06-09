@@ -9,23 +9,21 @@
 
   <!-- NAVIGATION BAR -->
   <div class="navbar">
-    <div class="navbar-inner">
-      <span class="logo">SMS WEB APP</span>
-      <div class="nav-links">
-        <a href="#" id="nav-home">HomePage</a>
-        <a href="#" id="nav-library">Add Library</a>
-        <a href="#" id="nav-message">Add Message</a>
-        <a href="#" id="nav-group">Add Group</a>
-        <a href="#" id="nav-contact">Add Contact</a>
-      </div>
+    <span class="logo">SMS WEB APP</span>
+    <div class="nav-links">
+      <a href="#" id="nav-home">HomePage</a>
+      <a href="#" id="nav-library">Add Library</a>
+      <a href="#" id="nav-message">Add Message</a>
+      <a href="#" id="nav-group">Add Group</a>
+      <a href="#" id="nav-contact">Add Contact</a>
     </div>
   </div>
 
   <!-- Home Page -->
   <div class="page" id="page-home">
     <div class="main-content">
-      <div class="box">Library</div>
-      <div class="box">Message</div>
+      <div class="box" id="library-list">Library</div>
+      <div class="box" id="groups-list">Groups</div>
       <div class="box center">
         <h3>Send Sms</h3>
         <input type="text" id="sms-name" placeholder="type name">
@@ -34,68 +32,60 @@
         <textarea placeholder="Message"></textarea>
         <button id="sms-submit">Send SMS</button>
       </div>
-      <div class="box">Groups</div>
-      <div class="box">Contact Details</div>
+      <div class="box" id="message-list">Message</div>
+      <div class="box" id="contact-list">Contact Details</div>
     </div>
   </div>
 
-
-<!-- ADD LIBRARY PAGE (in SMSWEBAPP.html) -->
-<div class="page" id="page-library">
-  <h1>Add Library</h1>
-  <div class="form-card">
-    <label for="library-name-input">Library Name</label>
-    <input
-      type="text"
-      id="library-name-input"
-      placeholder="Type Library Name">
-    <button>Submit</button>
+  <!-- Add Library Page -->
+  <div class="page" id="page-library">
+    <h1>Add Library</h1>
+    <div class="form-card">
+      <label for="library-name-input">Library Name</label>
+      <input type="text" id="library-name-input" placeholder="Type Library Name">
+      <button id="library-submit">Submit</button>
+    </div>
   </div>
-</div>
 
   <!-- Add Message Page -->
-<div class="page" id="page-message">
-  <h1>Add Message</h1>
-  <div class="form-card">
-    <label for="library-select">Select Library</label>
-    <input id="library-select" type="text" placeholder="Library Name">
-    <label for="library-message">Library Message</label>
-    <textarea id="library-message" placeholder="Message"></textarea>
-
-    <button>Submit</button>
+  <div class="page" id="page-message">
+    <h1>Add Message</h1>
+    <div class="form-card">
+      <label for="library-select">Select Library</label>
+      <select id="library-select">
+        <option value="">Select Library</option>
+      </select>
+      <label for="library-message">Library Message</label>
+      <textarea id="library-message" placeholder="Message"></textarea>
+      <button id="message-submit">Submit</button>
+    </div>
   </div>
-</div>
 
   <!-- Add Group Page -->
   <div class="page" id="page-group">
-  <h1>Add Group</h1>
-<div class="form-card">
-    <label for="group-name-input">Group Name</label>
-    <input id="group-name-input" type="text" placeholder="Group Name">
-    <button>Submit</button>
+    <h1>Add Group</h1>
+    <div class="form-card">
+      <label for="group-name-input">Group Name</label>
+      <input id="group-name-input" type="text" placeholder="Group Name">
+      <button id="group-submit">Submit</button>
+    </div>
   </div>
-</div>
 
   <!-- Add Contact Page -->
-<div class="page" id="page-contact">
-  <h1>Add Contact</h1>
-
-  <div class="form-card">
-    <label for="group-select">Select Group</label>
-    <input id="group-select" type="text" placeholder="Group Name">
-
-    <label for="contact-name">User Name</label>
-    <input id="contact-name" type="text" placeholder="User Name">
-
-    <label for="contact-mobile">User Mobile</label>
-    <input id="contact-mobile" type="tel" placeholder="Mobile">
-
-    <label for="contact-email">User Email</label>
-    <input id="contact-email" type="email" placeholder="Email">
-
-    <button>Submit</button>
+  <div class="page" id="page-contact">
+    <h1>Add Contact</h1>
+    <div class="form-card">
+      <label for="group-select">Select Group</label>
+      <input type="text" id="group-select" placeholder="Group Name">
+      <label for="contact-name">User Name</label>
+      <input type="text" id="contact-name" placeholder="User Name">
+      <label for="contact-mobile">User Mobile</label>
+      <input type="tel" id="contact-mobile" placeholder="Mobile">
+      <label for="contact-email">User Email</label>
+      <input type="email" id="contact-email" placeholder="Email">
+      <button id="contact-submit">Submit</button>
+    </div>
   </div>
-</div>
 
   <script src="SMSWEBAPP.js"></script>
 </body>
