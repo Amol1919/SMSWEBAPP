@@ -138,7 +138,7 @@ document.getElementById('sms-submit').onclick = function () {
   if (!email.includes("@")) return alert("❌ Email must contain '@'.");
   if (message === "") return alert("❌ Message can't be empty.");
 
-  alert("✅ SMS sent!");
+  alert("SMS sent!");
 };
 
 // --- Add Group ---
